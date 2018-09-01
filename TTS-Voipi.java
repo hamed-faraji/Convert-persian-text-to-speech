@@ -79,6 +79,16 @@ public class MainUIComboBOx extends JFrame {
 
 class DBCommonPropertyItem {
 	
+	
+	public DBCommonPropertyItem(String ID, String CP, String Ind, String Name, String Key, String IndexOrd) {
+		this.ID = ID;
+		this.CP = CP;
+		this.Ind = Ind;
+		this.Name = Name;
+		this.Key = Key;
+		this.IndexOrd = IndexOrd;
+
+	}
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////

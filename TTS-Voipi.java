@@ -72,7 +72,13 @@ public class MainUIComboBOx extends JFrame {
 							data.getString(3), data.getString(4), data.getString(5), data.getString(6));
 					CommonPropertyItem.add(temp);
 				}
-			
+				
+				data = statement.executeQuery("SELECT * FROM HatechTTS.dbo.CommonProperty");
+				while (data.next()) {
+					DBCommonProperty temp = new DBCommonProperty(data.getString(1), data.getString(2), data.getString(3),
+							data.getString(4));
+					CommonProperty.add(temp);
+				}
 			
 			} catch (SQLException e) {
 				e.printStackTrace();

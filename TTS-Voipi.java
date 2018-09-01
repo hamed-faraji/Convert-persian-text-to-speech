@@ -50,7 +50,10 @@ import javax.swing.JLabel;
 
 
 public class MainUIComboBOx extends JFrame {
-	
+
+	static ArrayList<DBCommonPropertyItem> CommonPropertyItem = new ArrayList<>();
+	static ArrayList<DBCommonProperty> CommonProperty = new ArrayList<>();
+	static ArrayList<DBResourceAssortment> ResourceAssortment = new ArrayList<>();
 	static String connectionUrl = "jdbc:sqlserver://192.***.*.*\\***************"; // add your own connection url
 	static String username = "*********"; // add your own username
 	static String password = "********";  // add your database password

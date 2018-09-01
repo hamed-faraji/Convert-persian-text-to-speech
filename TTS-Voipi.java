@@ -50,7 +50,9 @@ import javax.swing.JLabel;
 
 
 public class TTS-Voipi extends JFrame {
-
+	
+	private static final long serialVersionUID = 1L;
+	protected static final Window frame = null;
 	static ArrayList<DBCommonPropertyItem> CommonPropertyItem = new ArrayList<>();
 	static ArrayList<DBCommonProperty> CommonProperty = new ArrayList<>();
 	static ArrayList<DBResourceAssortment> ResourceAssortment = new ArrayList<>();

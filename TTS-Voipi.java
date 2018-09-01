@@ -79,6 +79,15 @@ public class MainUIComboBOx extends JFrame {
 							data.getString(4));
 					CommonProperty.add(temp);
 				}
+				
+				data = statement.executeQuery("SELECT * FROM HatechTTS.dbo.ResourceAssortment");
+				while (data.next()) {
+					DBResourceAssortment temp = new DBResourceAssortment(data.getString(1), data.getString(2),
+							data.getString(3));
+					ResourceAssortment.add(temp);
+				}
+				statement.close();
+				connection.close();
 			
 			} catch (SQLException e) {
 				e.printStackTrace();

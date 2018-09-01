@@ -95,7 +95,16 @@ public class TTS-Voipi extends JFrame {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-			
+			EventQueue.invokeLater(new Runnable() {
+				public void run() {
+					try {
+						TTS-Voipi frame = new TTS-Voipi();
+						frame.setVisible(true);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			});
 			
 		
 		}

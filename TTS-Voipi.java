@@ -49,7 +49,7 @@ import java.awt.Toolkit;
 import javax.swing.JLabel;
 
 
-public class MainUIComboBOx extends JFrame {
+public class TTS-Voipi extends JFrame {
 
 	static ArrayList<DBCommonPropertyItem> CommonPropertyItem = new ArrayList<>();
 	static ArrayList<DBCommonProperty> CommonProperty = new ArrayList<>();
@@ -100,7 +100,7 @@ public class MainUIComboBOx extends JFrame {
 		
 		}
 	
-	public MainUIComboBOx() {
+	public TTS-Voipi() {
 		
 		}
 		

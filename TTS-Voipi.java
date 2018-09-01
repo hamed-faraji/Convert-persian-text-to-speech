@@ -51,7 +51,24 @@ import javax.swing.JLabel;
 
 public class MainUIComboBOx extends JFrame {
 	
+	static String connectionUrl = "jdbc:sqlserver://192.***.*.*\\***************"; // add your own connection url
+	static String username = "*********"; // add your own username
+	static String password = "********";  // add your database password
+	
 	public static void main(String[] args) throws ClassNotFoundException {
+		
+		try {
+				DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
+				Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+				Connection connection = DriverManager.getConnection(connectionUrl, username, password);
+				if (connection != null) {
+					System.out.println("Connected");
+				}
+				Statement statement = connection.createStatement();
+				ResultSet data = statement.executeQuery("SELECT * FROM HatechTTS.dbo.CommonPropertyItem");
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		
 		}
 	

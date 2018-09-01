@@ -109,4 +109,10 @@ class DBCommonProperty {
 
 class DBResourceAssortment {
 	
+	public DBResourceAssortment(String ID, String Name, String Member) {
+		this.ID = ID;
+		this.Name = Name;
+		this.Member = Member;
+
+	}
 }

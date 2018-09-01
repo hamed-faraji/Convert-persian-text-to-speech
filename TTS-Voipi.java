@@ -47,3 +47,27 @@ import javax.swing.JButton;
 import java.awt.Point;
 import java.awt.Toolkit;
 import javax.swing.JLabel;
+
+
+public class MainUIComboBOx extends JFrame {
+	
+	public static void main(String[] args) throws ClassNotFoundException {
+		
+		}
+	
+	public MainUIComboBOx() {
+		
+		}
+	
+	public void AddVoice() {
+		
+		}
+		
+	public void GetVoice() {
+		
+		}
+		
+	public void FirstPage(String msg) {
+		
+		}
+}

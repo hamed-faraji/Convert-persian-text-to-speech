@@ -195,6 +195,19 @@ public class TTS-Voipi extends JFrame {
 			for (int i = 0; i < CommonPropertyItem.size(); i++)
 				if (CommonPropertyItem.get(i).CP.equals(CommonProperty.get(1).ID))
 					comboBox_1.addItem(CommonPropertyItem.get(i).Name);
+			
+			//////////////////////////////// add field to show WordPosition Type text 
+			JTextField textField_2 = new JTextField();
+			textField_2.setFocusable(false);
+			textField_2.setFocusTraversalKeysEnabled(false);
+			textField_2.setText("\u062C\u0627\u06CC\u06AF\u0627\u0647 \u06A9\u0644\u0645\u0647");
+			textField_2.setFont(new Font("Tahoma", Font.BOLD, 22));
+			textField_2.setBorder(null);
+			textField_2.setBackground(Color.GRAY);
+			textField_2.setEditable(false);
+			textField_2.setBounds(465, 180, 166, 35);
+			contentPane1.add(textField_2);
+			textField_2.setColumns(10);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

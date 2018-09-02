@@ -208,6 +208,15 @@ public class TTS-Voipi extends JFrame {
 			textField_2.setBounds(465, 180, 166, 35);
 			contentPane1.add(textField_2);
 			textField_2.setColumns(10);
+			
+			///////////////////////////////// add combobox to display WordPosition Type
+			JComboBox<String> comboBox_2 = new JComboBox<String>();
+			comboBox_2.setBounds(200, 180, 250, 35);
+			comboBox_2.setFont(new Font("Tahoma", Font.BOLD, 22));
+			contentPane1.add(comboBox_2);
+			for (int i = 0; i < CommonPropertyItem.size(); i++)
+				if (CommonPropertyItem.get(i).CP.equals(CommonProperty.get(2).ID))
+					comboBox_2.addItem(CommonPropertyItem.get(i).Name);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

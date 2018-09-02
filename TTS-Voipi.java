@@ -143,6 +143,12 @@ public class TTS-Voipi extends JFrame {
 			contentPane1.setBorder(new EmptyBorder(5, 5, 5, 5));
 			setContentPane(contentPane1);
 			contentPane1.setLayout(null);
+			
+			////////////////////////////// add label to display company logo
+			JLabel lblNewLabel = new JLabel("");
+			lblNewLabel.setBounds(300, 19, 250, 49);
+			lblNewLabel.setIcon(new ImageIcon(scaleImage));
+			contentPane1.add(lblNewLabel);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

@@ -149,6 +149,19 @@ public class TTS-Voipi extends JFrame {
 			lblNewLabel.setBounds(300, 19, 250, 49);
 			lblNewLabel.setIcon(new ImageIcon(scaleImage));
 			contentPane1.add(lblNewLabel);
+			
+			JTextField textField = new JTextField();
+			textField.setFocusable(false);
+			textField.setFocusTraversalKeysEnabled(false);
+			textField.setFont(new Font("Tahoma", Font.BOLD, 22));
+			textField.setSelectedTextColor(Color.DARK_GRAY);
+			textField.setEditable(false);
+			textField.setBorder(null);
+			textField.setBackground(Color.GRAY);
+			textField.setText("\u0646\u0648\u0639 \u06AF\u0648\u06CC\u0634");
+			textField.setBounds(465, 80, 120, 35);
+			contentPane1.add(textField);
+			textField.setColumns(10);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

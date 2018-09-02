@@ -53,6 +53,8 @@ public class TTS-Voipi extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
 	protected static final Window frame = null;
+	public Boolean Flag;
+	public Boolean SqlEscFlag;
 	static ArrayList<DBCommonPropertyItem> CommonPropertyItem = new ArrayList<>();
 	static ArrayList<DBCommonProperty> CommonProperty = new ArrayList<>();
 	static ArrayList<DBResourceAssortment> ResourceAssortment = new ArrayList<>();
@@ -126,7 +128,8 @@ public class TTS-Voipi extends JFrame {
 		
 	/////////////////////////////////////// page to add voice to database //////////////////////////////////
 	public void AddVoice() {
-		
+			Flag = false;
+			SqlEscFlag = true;
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

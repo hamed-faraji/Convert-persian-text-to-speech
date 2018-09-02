@@ -150,6 +150,7 @@ public class TTS-Voipi extends JFrame {
 			lblNewLabel.setIcon(new ImageIcon(scaleImage));
 			contentPane1.add(lblNewLabel);
 			
+			////////////////////////////// add field to show Pronounce Type text
 			JTextField textField = new JTextField();
 			textField.setFocusable(false);
 			textField.setFocusTraversalKeysEnabled(false);
@@ -171,6 +172,20 @@ public class TTS-Voipi extends JFrame {
 			for (int i = 0; i < CommonPropertyItem.size(); i++)
 				if (CommonPropertyItem.get(i).CP.equals(CommonProperty.get(0).ID))
 					comboBox.addItem(CommonPropertyItem.get(i).Name);
+			
+			/////////////////////////////// add field to show Word Type text
+			JTextField textField_1 = new JTextField();
+			textField_1.setFocusable(false);
+			textField_1.setFocusTraversalKeysEnabled(false);
+			textField_1.setEditable(false);
+			textField_1.setBorder(null);
+			textField_1.setBackground(Color.GRAY);
+			textField_1.setFont(new Font("Tahoma", Font.BOLD, 22));
+			textField_1.setToolTipText("");
+			textField_1.setText("\u0646\u0648\u0639 \u06A9\u0644\u0645\u0647");
+			textField_1.setBounds(465, 130, 131, 35);
+			contentPane1.add(textField_1);
+			textField_1.setColumns(10);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

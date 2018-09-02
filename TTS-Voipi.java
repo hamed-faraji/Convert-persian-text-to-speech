@@ -1,4 +1,4 @@
-import java.awt.EventQueue;
+	import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -112,7 +112,16 @@ public class TTS-Voipi extends JFrame {
 		}
 	
 	public TTS-Voipi() {
-		
+			Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+			dx =  (int) (screenSize.getWidth()/2 - 400);
+			dy =  (int) (screenSize.getHeight()/2 - 400);
+			setTitle("VOIPI");
+			setFont(new Font("Dialog", Font.BOLD, 12));
+			setForeground(Color.BLACK);
+			setVisible(true);
+			setLocation(new Point(10, 0));
+			setResizable(false);
+			FirstPage("");
 		}
 		
 	/////////////////////////////////////// page to add voice to database //////////////////////////////////

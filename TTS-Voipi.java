@@ -130,8 +130,19 @@ public class TTS-Voipi extends JFrame {
 	public void AddVoice() {
 			Flag = false;
 			SqlEscFlag = true;
+			
+			////////////////////////////// read company image to show
 			ImageIcon icon = new ImageIcon(getClass().getResource("/hatech-blue.png"));
 			Image scaleImage = icon.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
+			
+			////////////////////////////// set some features of frame
+			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			setBounds(dx, dy, 800, 800);
+			JPanel contentPane1 = new JPanel();
+			contentPane1.setBackground(Color.GRAY);
+			contentPane1.setBorder(new EmptyBorder(5, 5, 5, 5));
+			setContentPane(contentPane1);
+			contentPane1.setLayout(null);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

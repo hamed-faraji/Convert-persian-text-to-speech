@@ -130,6 +130,8 @@ public class TTS-Voipi extends JFrame {
 	public void AddVoice() {
 			Flag = false;
 			SqlEscFlag = true;
+			ImageIcon icon = new ImageIcon(getClass().getResource("/hatech-blue.png"));
+			Image scaleImage = icon.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

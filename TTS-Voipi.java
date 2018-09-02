@@ -162,6 +162,15 @@ public class TTS-Voipi extends JFrame {
 			textField.setBounds(465, 80, 120, 35);
 			contentPane1.add(textField);
 			textField.setColumns(10);
+			
+			//////////////////////////////// add combobox to display Pronounce Type
+			JComboBox<String> comboBox = new JComboBox<String>();
+			comboBox.setFont(new Font("Tahoma", Font.BOLD, 22));
+			comboBox.setBounds(200, 80, 250, 35);
+			contentPane1.add(comboBox);
+			for (int i = 0; i < CommonPropertyItem.size(); i++)
+				if (CommonPropertyItem.get(i).CP.equals(CommonProperty.get(0).ID))
+					comboBox.addItem(CommonPropertyItem.get(i).Name);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

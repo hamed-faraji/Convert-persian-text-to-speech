@@ -309,6 +309,35 @@ public class TTS-Voipi extends JFrame {
 			textField_5.setBounds(465, 366, 136, 35);
 			contentPane1.add(textField_5);
 			textField_5.setColumns(10);
+			
+			//////////////////////////////// add field to Write Key text that must be added with two type of action listener
+			JTextField txtWriteYourKey = new JTextField();
+			txtWriteYourKey.addKeyListener(new KeyAdapter() {
+				@Override
+				public void keyPressed(KeyEvent e) {
+					if (txtWriteYourKey.getText().contains("Write your key")) {
+						txtWriteYourKey.setText("");
+						txtWriteYourKey.setForeground(Color.BLUE);
+						txtWriteYourKey.setFont(new Font("Tahoma", Font.BOLD, 22));
+					}
+				}
+			});
+			txtWriteYourKey.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					txtWriteYourKey.setText("");
+					txtWriteYourKey.setForeground(Color.BLUE);
+					txtWriteYourKey.setFont(new Font("Tahoma", Font.BOLD, 22));
+				}
+			});
+			txtWriteYourKey.setText("Write your key");
+			txtWriteYourKey.setHorizontalAlignment(SwingConstants.CENTER);
+			txtWriteYourKey.setForeground(Color.LIGHT_GRAY);
+			txtWriteYourKey.setFont(new Font("Tahoma", Font.ITALIC, 22));
+			txtWriteYourKey.setBorder(null);
+			txtWriteYourKey.setBounds(200, 366, 250, 35);
+			contentPane1.add(txtWriteYourKey);
+			txtWriteYourKey.setColumns(10);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

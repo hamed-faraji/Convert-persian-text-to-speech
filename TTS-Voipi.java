@@ -240,7 +240,7 @@ public class TTS-Voipi extends JFrame {
 			for (int i = 0; i < ResourceAssortment.size(); i++)
 				comboBox_3.addItem(ResourceAssortment.get(i).Name);
 			
-			//////////////////////////////// add field to show Gender text
+			//////////////////////////////// add field to show Word text
 			JTextField textField_4 = new JTextField();
 			textField_4.setFocusable(false);
 			textField_4.setFocusTraversalKeysEnabled(false);
@@ -251,6 +251,12 @@ public class TTS-Voipi extends JFrame {
 			textField_4.setBounds(465, 322, 131, 35);
 			contentPane1.add(textField_4);
 			textField_4.setColumns(10);
+			
+			///////////////////////////////// add combobox to display Gender Types
+			JComboBox<String> comboBox_4 = new JComboBox<String>();
+			comboBox_4.setEnabled(false);
+			comboBox_4.setBounds(200, 278, 250, 35);
+			contentPane1.add(comboBox_4);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

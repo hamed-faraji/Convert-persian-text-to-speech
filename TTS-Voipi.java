@@ -298,6 +298,17 @@ public class TTS-Voipi extends JFrame {
 			txtWriteYourWord.setBounds(200, 322, 250, 35);
 			contentPane1.add(txtWriteYourWord);
 			txtWriteYourWord.setColumns(10);
+			
+			//////////////////////////////// add field to show Key text
+			JTextField textField_5 = new JTextField();
+			textField_5.setText(": \u06A9\u0644\u06CC\u062F");
+			textField_5.setBackground(Color.GRAY);
+			textField_5.setFont(new Font("Tahoma", Font.BOLD, 22));
+			textField_5.setEditable(false);
+			textField_5.setBorder(null);
+			textField_5.setBounds(465, 366, 136, 35);
+			contentPane1.add(textField_5);
+			textField_5.setColumns(10);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

@@ -338,6 +338,19 @@ public class TTS-Voipi extends JFrame {
 			txtWriteYourKey.setBounds(200, 366, 250, 35);
 			contentPane1.add(txtWriteYourKey);
 			txtWriteYourKey.setColumns(10);
+			
+			//////////////////////////////// add field to show Description text
+			JTextField textField_6 = new JTextField();
+			textField_6.setFocusable(false);
+			textField_6.setFocusTraversalKeysEnabled(false);
+			textField_6.setText(": \u062A\u0648\u0636\u06CC\u062D\u0627\u062A");
+			textField_6.setFont(new Font("Tahoma", Font.BOLD, 22));
+			textField_6.setEditable(false);
+			textField_6.setBackground(Color.GRAY);
+			textField_6.setBorder(null);
+			textField_6.setBounds(465, 418, 131, 35);
+			contentPane1.add(textField_6);
+			textField_6.setColumns(10);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

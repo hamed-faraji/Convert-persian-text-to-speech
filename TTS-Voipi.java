@@ -217,6 +217,20 @@ public class TTS-Voipi extends JFrame {
 			for (int i = 0; i < CommonPropertyItem.size(); i++)
 				if (CommonPropertyItem.get(i).CP.equals(CommonProperty.get(2).ID))
 					comboBox_2.addItem(CommonPropertyItem.get(i).Name);
+			
+			//////////////////////////////// add field to show Assortment text 			
+			JTextField textField_3 = new JTextField();
+			textField_3.setFocusable(false);
+			textField_3.setFocusTraversalKeysEnabled(false);
+			textField_3.setBorder(null);
+			textField_3.setBackground(Color.GRAY);
+			textField_3.setBackground(Color.GRAY);
+			textField_3.setText("\u062F\u0633\u062A\u0647 \u0628\u0646\u062F\u06CC");
+			textField_3.setFont(new Font("Tahoma", Font.BOLD, 22));
+			textField_3.setEditable(false);
+			textField_3.setBounds(465, 234, 166, 35);
+			contentPane1.add(textField_3);
+			textField_3.setColumns(10);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

@@ -231,6 +231,14 @@ public class TTS-Voipi extends JFrame {
 			textField_3.setBounds(465, 234, 166, 35);
 			contentPane1.add(textField_3);
 			textField_3.setColumns(10);
+			
+			///////////////////////////////// add combobox to display Assortment Types
+			JComboBox<String> comboBox_3 = new JComboBox<String>();
+			comboBox_3.setBounds(200, 230, 250, 35);
+			comboBox_3.setFont(new Font("Tahoma", Font.BOLD, 22));
+			contentPane1.add(comboBox_3);
+			for (int i = 0; i < ResourceAssortment.size(); i++)
+				comboBox_3.addItem(ResourceAssortment.get(i).Name);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

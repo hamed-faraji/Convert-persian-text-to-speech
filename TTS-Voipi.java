@@ -257,6 +257,19 @@ public class TTS-Voipi extends JFrame {
 			comboBox_4.setEnabled(false);
 			comboBox_4.setBounds(200, 278, 250, 35);
 			contentPane1.add(comboBox_4);
+			
+			//////////////////////////////// add field to show Gender text
+			JTextField textField_8 = new JTextField();
+			textField_8.setBorder(null);
+			textField_8.setText(": \u062C\u0646\u0633\u06CC\u062A");
+			textField_8.setFont(new Font("Tahoma", Font.BOLD, 22));
+			textField_8.setBackground(Color.GRAY);
+			textField_8.setEditable(false);
+			textField_8.setFocusTraversalKeysEnabled(false);
+			textField_8.setFocusable(false);
+			textField_8.setBounds(465, 278, 166, 36);
+			contentPane1.add(textField_8);
+			textField_8.setColumns(10);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

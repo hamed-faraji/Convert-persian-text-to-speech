@@ -270,6 +270,34 @@ public class TTS-Voipi extends JFrame {
 			textField_8.setBounds(465, 278, 166, 36);
 			contentPane1.add(textField_8);
 			textField_8.setColumns(10);
+			
+			//////////////////////////////// add field to Write word text that must be added with two type of action listener
+			JTextField txtWriteYourWord = new JTextField();
+			txtWriteYourWord.addKeyListener(new KeyAdapter() {
+				@Override
+				public void keyPressed(KeyEvent e) {
+					if (txtWriteYourWord.getText().contains("Write your word here")) {
+						txtWriteYourWord.setText("");
+						txtWriteYourWord.setForeground(Color.BLUE);
+						txtWriteYourWord.setFont(new Font("Tahoma", Font.BOLD, 22));
+					}
+				}
+			});
+			txtWriteYourWord.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					txtWriteYourWord.setText("");
+					txtWriteYourWord.setForeground(Color.BLUE);
+					txtWriteYourWord.setFont(new Font("Tahoma", Font.BOLD, 22));
+				}
+			});
+			txtWriteYourWord.setHorizontalAlignment(SwingConstants.CENTER);
+			txtWriteYourWord.setText("Write your word here");
+			txtWriteYourWord.setForeground(Color.LIGHT_GRAY);
+			txtWriteYourWord.setFont(new Font("Tahoma", Font.ITALIC, 22));
+			txtWriteYourWord.setBounds(200, 322, 250, 35);
+			contentPane1.add(txtWriteYourWord);
+			txtWriteYourWord.setColumns(10);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

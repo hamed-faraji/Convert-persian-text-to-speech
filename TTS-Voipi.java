@@ -351,6 +351,38 @@ public class TTS-Voipi extends JFrame {
 			textField_6.setBounds(465, 418, 131, 35);
 			contentPane1.add(textField_6);
 			textField_6.setColumns(10);
+			
+			//////////////////////////////// add Text Area to Write Description text
+			JTextArea txtrWriteHere = new JTextArea();
+			txtrWriteHere.addKeyListener(new KeyAdapter() {
+				@Override
+				public void keyPressed(KeyEvent e) {
+					if (txtrWriteHere.getText().contains("         \r\n            Write Here")) {
+						txtrWriteHere.setForeground(Color.black);
+						txtrWriteHere.setText(" ");
+						txtrWriteHere.setFont(new Font("Tahoma", Font.PLAIN, 22));
+					}
+				}
+			});
+			txtrWriteHere.setBounds(130, 380, 320, 100);
+			txtrWriteHere.setBorder(null);
+			contentPane1.add(txtrWriteHere);
+			txtrWriteHere.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+			txtrWriteHere.setLineWrap(true);
+			txtrWriteHere.setWrapStyleWord(true);
+			txtrWriteHere.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					txtrWriteHere.setForeground(Color.black);
+					txtrWriteHere.setText(" ");
+					txtrWriteHere.setFont(new Font("Tahoma", Font.PLAIN, 22));
+				}
+			});
+			txtrWriteHere.setForeground(Color.LIGHT_GRAY);
+			txtrWriteHere.setText("         \r\n            Write Here");
+			txtrWriteHere.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 22));
+			txtrWriteHere.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
+			contentPane1.add(txtrWriteHere);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

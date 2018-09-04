@@ -402,6 +402,20 @@ public class TTS-Voipi extends JFrame {
 			textField_7.setBounds(465, 600, 166, 35);
 			contentPane1.add(textField_7);
 			textField_7.setColumns(10);
+			
+			//////////////////////////////// add field to show Voice Path
+			JTextField textField_9 = new JTextField();
+			textField_9.setFocusable(false);
+			textField_9.setFocusTraversalKeysEnabled(false);
+			textField_9.setBorder(null);
+			textField_9.setBackground(Color.GRAY);
+			textField_9.setEditable(false);
+			textField_9.setHorizontalAlignment(SwingConstants.CENTER);
+			textField_9.setForeground(Color.RED);
+			textField_9.setFont(new Font("Tahoma", Font.BOLD, 20));
+			textField_9.setBounds(130, 638, 404, 29);
+			contentPane1.add(textField_9);
+			textField_9.setColumns(10);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

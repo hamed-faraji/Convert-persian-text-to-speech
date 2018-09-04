@@ -389,6 +389,19 @@ public class TTS-Voipi extends JFrame {
 			scrollPane.setBounds(130, 420, 320, 160);
 			scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 			contentPane1.add(scrollPane);
+			
+			//////////////////////////////// add field to show Voice File text
+			JTextField textField_7 = new JTextField();
+			textField_7.setFocusable(false);
+			textField_7.setFocusTraversalKeysEnabled(false);
+			textField_7.setText(": \u0641\u0627\u06CC\u0644 \u0635\u062F\u0627");
+			textField_7.setBackground(Color.GRAY);
+			textField_7.setFont(new Font("Tahoma", Font.BOLD, 22));
+			textField_7.setEditable(false);
+			textField_7.setBorder(null);
+			textField_7.setBounds(465, 600, 166, 35);
+			contentPane1.add(textField_7);
+			textField_7.setColumns(10);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

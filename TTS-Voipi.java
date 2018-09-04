@@ -383,6 +383,12 @@ public class TTS-Voipi extends JFrame {
 			txtrWriteHere.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 22));
 			txtrWriteHere.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
 			contentPane1.add(txtrWriteHere);
+			
+			//////////////////////////////// add scroll bar to describe every thing 
+			JScrollPane scrollPane = new JScrollPane(txtrWriteHere);
+			scrollPane.setBounds(130, 420, 320, 160);
+			scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+			contentPane1.add(scrollPane);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

@@ -403,7 +403,7 @@ public class TTS-Voipi extends JFrame {
 			contentPane1.add(textField_7);
 			textField_7.setColumns(10);
 			
-			//////////////////////////////// add field to show Voice Path
+			//////////////////////////////// add Textfield
 			JTextField textField_9 = new JTextField();
 			textField_9.setFocusable(false);
 			textField_9.setFocusTraversalKeysEnabled(false);
@@ -416,6 +416,20 @@ public class TTS-Voipi extends JFrame {
 			textField_9.setBounds(130, 638, 404, 29);
 			contentPane1.add(textField_9);
 			textField_9.setColumns(10);
+			
+			//////////////////////////////// add field to show Voice Path
+			JTextField txtWriteYourFile = new JTextField();
+			txtWriteYourFile.setFocusable(false);
+			txtWriteYourFile.setFocusTraversalKeysEnabled(false);
+			txtWriteYourFile.setEditable(false);
+			txtWriteYourFile.setHorizontalAlignment(SwingConstants.CENTER);
+			txtWriteYourFile.setText("Choose by FileChooser");
+			txtWriteYourFile.setFont(new Font("Tahoma", Font.BOLD, 20));
+			txtWriteYourFile.setForeground(Color.BLUE);
+			txtWriteYourFile.setBorder(new MatteBorder(3, 3, 3, 3, (Color) new Color(0, 0, 0)));
+			txtWriteYourFile.setBounds(130, 599, 283, 36);
+			contentPane1.add(txtWriteYourFile);
+			txtWriteYourFile.setColumns(10);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

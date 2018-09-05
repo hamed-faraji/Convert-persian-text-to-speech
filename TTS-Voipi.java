@@ -448,6 +448,34 @@ public class TTS-Voipi extends JFrame {
 					File Sound = f.getSelectedFile();
 					data = new byte[(int) Sound.length()];
 					FileInputStream in = null;
+					//////////////////////////////////// display file path in field and Done massages
+					try {
+						in = new FileInputStream(Sound);
+						String temp = f.getCurrentDirectory() + "/" + f.getName(Sound);
+						txtWriteYourFile.setFont(new Font("Tahoma", Font.BOLD, 10));
+						txtWriteYourFile.setText(temp);
+						textField_9.setForeground(Color.GREEN);
+						textField_9.setText("Done, Now Press Down Button");
+						Flag = true;
+
+					} catch (FileNotFoundException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+						textField_9.setText("Error in choosing File !!");
+						Flag = false;
+					}
+					try {
+						in.read(data);
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					try {
+						in.close();
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
 				}
 			});
 			btnNewButton.setForeground(Color.LIGHT_GRAY);

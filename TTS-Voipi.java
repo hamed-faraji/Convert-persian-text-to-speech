@@ -499,6 +499,31 @@ public class TTS-Voipi extends JFrame {
 							& !txtWriteYourWord.getText().equals("")
 							& !txtWriteYourWord.getText().equals("Write your word here")) {
 						String AssortmentID = "";
+						//////////////////////////// connect to database again
+						try {
+							DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
+							Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+							Connection connection = DriverManager.getConnection(connectionUrl, username, password);
+							if (connection != null) {
+								System.out.println("Connected");
+							}
+							
+						} catch (SQLException e1) {
+							e1.printStackTrace();
+							SqlEscFlag = false;
+
+						} catch (ClassNotFoundException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						if (SqlEscFlag) {
+							contentPane1.setVisible(false);
+							FirstPage("Your File Inserted To DataBase !!!");
+						}
+					} else {
+						textField_9.setForeground(Color.RED);
+						textField_9.setText("Wrong input in fields !!");
+					}
 				}
 			});
 			btnNewButton_1.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));

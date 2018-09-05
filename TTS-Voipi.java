@@ -430,6 +430,23 @@ public class TTS-Voipi extends JFrame {
 			txtWriteYourFile.setBounds(130, 599, 283, 36);
 			contentPane1.add(txtWriteYourFile);
 			txtWriteYourFile.setColumns(10);
+			
+			//////////////////////////////// Button for chossing file from directory
+			JButton btnNewButton = new JButton(">");
+			btnNewButton.setFocusPainted(false);
+			btnNewButton.setFocusTraversalKeysEnabled(false);
+			btnNewButton.setFocusable(false);
+			btnNewButton.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+				}
+			});
+			btnNewButton.setForeground(Color.LIGHT_GRAY);
+			btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 22));
+			btnNewButton.setBackground(Color.BLUE);
+			btnNewButton.setBorder(new MatteBorder(3, 3, 3, 3, (Color) new Color(0, 0, 0)));
+			btnNewButton.setBounds(409, 599, 41, 36);
+			contentPane1.add(btnNewButton);
 		}
 		
 	/////////////////////////////////////// page to get your text's related voice from database ///////////	

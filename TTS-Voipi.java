@@ -494,6 +494,11 @@ public class TTS-Voipi extends JFrame {
 			btnNewButton_1.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
+					///////////////////////////////////// check some exeptions
+					if (Flag & !txtWriteYourKey.getText().equals("Write your key") & !txtWriteYourKey.getText().equals("")
+							& !txtWriteYourWord.getText().equals("")
+							& !txtWriteYourWord.getText().equals("Write your word here")) {
+						String AssortmentID = "";
 				}
 			});
 			btnNewButton_1.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));

@@ -439,6 +439,15 @@ public class TTS-Voipi extends JFrame {
 			btnNewButton.addMouseListener(new MouseAdapter() {
 				@Override
 				public void mouseClicked(MouseEvent e) {
+					///////////////////////////////////// add filechooser and convert voice file to Byte array
+					JFileChooser f = new JFileChooser();
+					FileNameExtensionFilter filter = new FileNameExtensionFilter("mp3 & wav Images", "wav", "mp3");
+					f.setFileFilter(filter);
+					f.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES);
+					f.showSaveDialog(null);
+					File Sound = f.getSelectedFile();
+					data = new byte[(int) Sound.length()];
+					FileInputStream in = null;
 				}
 			});
 			btnNewButton.setForeground(Color.LIGHT_GRAY);
